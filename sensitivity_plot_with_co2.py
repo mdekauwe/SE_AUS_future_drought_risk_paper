@@ -63,8 +63,6 @@ def main(fname1, fname2, fname3, fname4, fname5, fname6, fname7, plot_fname=None
     ax5 = fig.add_subplot(235)
     ax6 = fig.add_subplot(236)
 
-
-
     # pre-dawn
     df1x = df1.sel(time=datetime.time(6))
     df2x = df2.sel(time=datetime.time(6))
@@ -73,7 +71,6 @@ def main(fname1, fname2, fname3, fname4, fname5, fname6, fname7, plot_fname=None
     df5x = df5.sel(time=datetime.time(6))
     df6x = df6.sel(time=datetime.time(6))
     df7x = df7.sel(time=datetime.time(6))
-
 
     # midday
     df1y = df1.sel(time=datetime.time(12))
@@ -109,8 +106,6 @@ def main(fname1, fname2, fname3, fname4, fname5, fname6, fname7, plot_fname=None
     psi_leaf6 = df6y["psi_leaf"].values
     psi_leaf7 = df7y["psi_leaf"].values
 
-
-
     min_thresh=0.01
 
     gsw1 = np.where(gsw1>min_thresh, gsw1, np.nan)
@@ -128,7 +123,6 @@ def main(fname1, fname2, fname3, fname4, fname5, fname6, fname7, plot_fname=None
     psi_leaf5 = np.where(gsw5>min_thresh, psi_leaf5, np.nan)
     psi_leaf6 = np.where(gsw6>min_thresh, psi_leaf6, np.nan)
     psi_leaf7 = np.where(gsw7>min_thresh, psi_leaf7, np.nan)
-
 
 
     ax1.plot(psi_leaf1, gsw1, c=colours[0], marker=".", markersize=3, alpha=0.8,
