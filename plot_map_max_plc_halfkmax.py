@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 """
-Plot each species maximum PLC as map for each of the three experiments
-(CTL, rPPT and eCO2) - halving kmax
+For each each species, plot the maximum PLC as map for each of the three
+experiments (CTL, rPPT and eCO2) - halving kmax
 
 That's all folks.
 """
