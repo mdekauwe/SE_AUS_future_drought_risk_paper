@@ -39,9 +39,9 @@ def main(site, met_fname, flux_fname, fname1, fname2, plot_fname=None):
     df_met = read_cable_file(met_fname, type="MET")
     df_met = resample_timestep(df_met, type="MET")
 
-    df1_drt = df1[(df1.index > '2012-10-1') & (df1.index <= '2013-4-1')]
-    df2_drt = df2[(df2.index > '2012-10-1') & (df2.index <= '2013-4-1')]
-    df_flx_drt = df_flx[(df_flx.index > '2012-10-1') & (df_flx.index <= '2013-4-1')]
+    df1_drt = df1[(df1.index > '2012-11-1') & (df1.index <= '2013-4-1')]
+    df2_drt = df2[(df2.index > '2012-11-1') & (df2.index <= '2013-4-1')]
+    df_flx_drt = df_flx[(df_flx.index > '2012-11-1') & (df_flx.index <= '2013-4-1')]
 
     print("LE - Control")
     m = df1_drt.Qle.values
@@ -132,7 +132,7 @@ def main(site, met_fname, flux_fname, fname1, fname2, plot_fname=None):
     for a in axes:
         #a.set_xlim([datetime.date(2002,10,1), datetime.date(2003, 4, 1)])
         #a.set_xlim([datetime.date(2002,12,1), datetime.date(2003, 5, 1)])
-        a.set_xlim([datetime.date(2012,10,1), datetime.date(2013, 4, 1)])
+        a.set_xlim([datetime.date(2012,11,1), datetime.date(2013, 4, 1)])
         #a.set_xlim([datetime.date(2012,7,1), datetime.date(2013, 8, 1)])
         #a.set_xlim([datetime.date(2006,11,1), datetime.date(2007, 4, 1)])
 
