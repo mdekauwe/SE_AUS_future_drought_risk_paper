@@ -291,8 +291,8 @@ if __name__ == "__main__":
     met_fname = os.path.join(met_dir, "WombatStateForestOzFlux2.0_met.nc")
 
     fname1 = "outputs/standard_wombat.nc"
-    fname2 = "outputs/profitmax_wombat_1.100000.nc"
-    #fname2 = "outputs/profitmax_wombat.nc"
+    #fname2 = "outputs/profitmax_wombat_1.100000.nc"
+    fname2 = "outputs/profitmax_wombat.nc"
 
 
     odir = "/Users/mdekauwe/Dropbox/Documents/papers/Future_euc_drought_paper/figures/figs/"
