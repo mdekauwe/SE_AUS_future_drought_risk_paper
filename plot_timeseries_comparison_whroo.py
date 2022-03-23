@@ -218,6 +218,19 @@ def read_cable_file(fname, type=None):
 
     return df
 
+def add_date_time_stamp(df, start_date):
+
+    nintervals = df.shape[0]
+    dates = pd.date_range(start_date, periods=nintervals, freq='30min')
+
+    df['dates'] = dates
+    df = df.set_index('dates')
+    df['year'] = df.index.year
+    df['doy'] = df.index.dayofyear
+    df['hod'] = df.index.hour
+
+    return df
+    
 def resample_timestep(df, type=None):
 
     UMOL_TO_MOL = 1E-6
